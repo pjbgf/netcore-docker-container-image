@@ -9,10 +9,8 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
       - checkout
-      
-      - run: service docker start
 
-      - run: docker build . --rm --no-cache -t $DOCKER_IMAGE_NAME_WITH_REGISTRY
+      - run: docker build Dockerfile -t $DOCKER_IMAGE_NAME_WITH_REGISTRY
 
       - run: docker login $DOCKER_REGISTRY_URI -u $DOCKER_REGISTRY_SERVER_USERNAME -p $DOCKER_REGISTRY_SERVER_PASSWORD
 
