@@ -8,12 +8,12 @@ RUN su
 RUN echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ wheezy main" | \
      tee /etc/apt/sources.list.d/azure-cli.list 
 RUN apt-key adv --keyserver packages.microsoft.com --recv-keys 52E16F86FEE04B979B07E28DB02C46DF417A0893
-RUN apt-get install apt-transport-https
-RUN apt-get update && apt-get install azure-cli
+RUN apt-get install apt-transport-https -y
+RUN apt-get update && apt-get install azure-cli -y
 
-RUN apt-get install gcc
-RUN apt-get install make
-RUN apt-get install --reinstall zlibc zlib1g zlib1g-dev
+RUN apt-get install gcc -y
+RUN apt-get install make -y
+RUN apt-get install --reinstall zlibc zlib1g zlib1g-dev -y
 
 RUN wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz
 RUN tar xf Python-3.6.2.tgz
