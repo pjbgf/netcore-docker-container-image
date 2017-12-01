@@ -17,9 +17,7 @@ RUN apt-get install --reinstall zlibc zlib1g zlib1g-dev -y
 
 RUN wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tgz
 RUN tar xf Python-3.6.2.tgz
-RUN cd Python-3.6.2/
-RUN ./configure
-RUN make altinstall
+RUN cd Python-3.6.2/ && ./configure &&  make altinstall
 
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 RUN chmod +x ./kubectl
