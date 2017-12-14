@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2-sdk
+FROM microsoft/dotnet:2.0.4-sdk-2.1.3
 
 ENV DOTNET_SKIP_FIRST_TIME_EXPERIENCE 1
 ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
