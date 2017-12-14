@@ -1,4 +1,4 @@
-FROM microsoft/dotnet-nightly:2.1-sdk
+FROM microsoft/dotnet:2-sdk
 
 ENV DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
