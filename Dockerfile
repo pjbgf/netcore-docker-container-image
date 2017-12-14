@@ -7,7 +7,7 @@ ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 RUN curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 
 # AZURE CLI DEPENDENCIES
-RUN apt-get update && apt-get install python-pip -y && pip install scandir
+RUN apt-get update && apt-get upgrade && apt-get install python-pip -y && pip install scandir
 
 # INSTALL AZURE-CLI-PYTHON
 RUN curl -L https://aka.ms/InstallAzureCli | bash
