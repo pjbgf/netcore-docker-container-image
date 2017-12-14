@@ -9,7 +9,7 @@ jobs:
       
       - setup_remote_docker
       - run: |
-	    IMAGE_WITH_TAG=$DOCKER_IMAGE_NAME_WITH_REGISTRY:beta
+            IMAGE_WITH_TAG=$DOCKER_IMAGE_NAME_WITH_REGISTRY:beta
             docker build . --rm --no-cache -t $IMAGE_WITH_TAG
             docker login $DOCKER_REGISTRY_URI -u $DOCKER_REGISTRY_SERVER_USERNAME -p $DOCKER_REGISTRY_SERVER_PASSWORD 
             docker push $IMAGE_WITH_TAG
