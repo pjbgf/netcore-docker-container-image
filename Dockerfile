@@ -11,3 +11,6 @@ RUN apt-get update && apt-get upgrade && apt-get install python-pip -y && pip in
 
 # INSTALL AZURE-CLI-PYTHON
 RUN curl -L https://aka.ms/InstallAzureCli | bash
+
+# INSTALL KUBECTL
+RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl
